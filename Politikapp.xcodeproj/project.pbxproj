@@ -12,6 +12,8 @@
 		83005D1B1E8005C8008BF4C4 /* RegistrierungVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 83005D1A1E8005C8008BF4C4 /* RegistrierungVC.swift */; };
 		83005D1D1E800630008BF4C4 /* PasswortVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 83005D1C1E800630008BF4C4 /* PasswortVC.swift */; };
 		83005D1F1E800AD6008BF4C4 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 83005D1E1E800AD6008BF4C4 /* GoogleService-Info.plist */; };
+		83005D231E802DB7008BF4C4 /* SWRevealViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 83005D221E802DB7008BF4C4 /* SWRevealViewController.m */; };
+		83005D271E802FF7008BF4C4 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 83005D261E802FF7008BF4C4 /* ViewController.swift */; };
 		83CDE5B61E7FECE0008F3EED /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 83CDE5B51E7FECE0008F3EED /* AppDelegate.swift */; };
 		83CDE5B81E7FECE0008F3EED /* LoginVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 83CDE5B71E7FECE0008F3EED /* LoginVC.swift */; };
 		83CDE5BB1E7FECE0008F3EED /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 83CDE5B91E7FECE0008F3EED /* Main.storyboard */; };
@@ -49,6 +51,10 @@
 		83005D1A1E8005C8008BF4C4 /* RegistrierungVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RegistrierungVC.swift; sourceTree = "<group>"; };
 		83005D1C1E800630008BF4C4 /* PasswortVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PasswortVC.swift; sourceTree = "<group>"; };
 		83005D1E1E800AD6008BF4C4 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = SOURCE_ROOT; };
+		83005D201E802DB6008BF4C4 /* Politikapp-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "Politikapp-Bridging-Header.h"; sourceTree = "<group>"; };
+		83005D211E802DB7008BF4C4 /* SWRevealViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SWRevealViewController.h; sourceTree = "<group>"; };
+		83005D221E802DB7008BF4C4 /* SWRevealViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SWRevealViewController.m; sourceTree = "<group>"; };
+		83005D261E802FF7008BF4C4 /* ViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		83CDE5B21E7FECE0008F3EED /* Politikapp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Politikapp.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		83CDE5B51E7FECE0008F3EED /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		83CDE5B71E7FECE0008F3EED /* LoginVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginVC.swift; sourceTree = "<group>"; };
@@ -110,6 +116,28 @@
 			name = Pods;
 			sourceTree = "<group>";
 		};
+		83005D241E802EE5008BF4C4 /* Login ViewController */ = {
+			isa = PBXGroup;
+			children = (
+				83CDE5B71E7FECE0008F3EED /* LoginVC.swift */,
+				83005D1C1E800630008BF4C4 /* PasswortVC.swift */,
+				83005D1A1E8005C8008BF4C4 /* RegistrierungVC.swift */,
+			);
+			name = "Login ViewController";
+			sourceTree = "<group>";
+		};
+		83005D251E802F10008BF4C4 /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				83CDE5C41E7FECE0008F3EED /* Info.plist */,
+				83005D1E1E800AD6008BF4C4 /* GoogleService-Info.plist */,
+				83005D211E802DB7008BF4C4 /* SWRevealViewController.h */,
+				83005D221E802DB7008BF4C4 /* SWRevealViewController.m */,
+				83005D201E802DB6008BF4C4 /* Politikapp-Bridging-Header.h */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
 		83CDE5A91E7FECE0008F3EED = {
 			isa = PBXGroup;
 			children = (
@@ -136,14 +164,12 @@
 			isa = PBXGroup;
 			children = (
 				83CDE5B51E7FECE0008F3EED /* AppDelegate.swift */,
-				83CDE5B71E7FECE0008F3EED /* LoginVC.swift */,
-				83005D1C1E800630008BF4C4 /* PasswortVC.swift */,
-				83005D1A1E8005C8008BF4C4 /* RegistrierungVC.swift */,
 				83CDE5B91E7FECE0008F3EED /* Main.storyboard */,
+				83005D261E802FF7008BF4C4 /* ViewController.swift */,
+				83005D241E802EE5008BF4C4 /* Login ViewController */,
 				83CDE5BF1E7FECE0008F3EED /* Assets.xcassets */,
 				83CDE5C11E7FECE0008F3EED /* LaunchScreen.storyboard */,
-				83CDE5C41E7FECE0008F3EED /* Info.plist */,
-				83005D1E1E800AD6008BF4C4 /* GoogleService-Info.plist */,
+				83005D251E802F10008BF4C4 /* Supporting Files */,
 				83CDE5BC1E7FECE0008F3EED /* Politikapp.xcdatamodeld */,
 			);
 			path = Politikapp;
@@ -254,6 +280,7 @@
 				TargetAttributes = {
 					83CDE5B11E7FECE0008F3EED = {
 						CreatedOnToolsVersion = 8.2.1;
+						LastSwiftMigration = 0820;
 						ProvisioningStyle = Automatic;
 					};
 					83CDE5C81E7FECE0008F3EED = {
@@ -463,7 +490,9 @@
 				83CDE5B81E7FECE0008F3EED /* LoginVC.swift in Sources */,
 				83005D1D1E800630008BF4C4 /* PasswortVC.swift in Sources */,
 				83CDE5B61E7FECE0008F3EED /* AppDelegate.swift in Sources */,
+				83005D271E802FF7008BF4C4 /* ViewController.swift in Sources */,
 				83005D1B1E8005C8008BF4C4 /* RegistrierungVC.swift in Sources */,
+				83005D231E802DB7008BF4C4 /* SWRevealViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -616,10 +645,13 @@
 			baseConfigurationReference = FCDDF25FBAF069F80B06C693 /* Pods-Politikapp.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CLANG_ENABLE_MODULES = YES;
 				INFOPLIST_FILE = Politikapp/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = Politikapp.Politikapp;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = "Politikapp/Politikapp-Bridging-Header.h";
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 				SWIFT_VERSION = 3.0;
 			};
 			name = Debug;
@@ -629,10 +661,12 @@
 			baseConfigurationReference = 77529FB5CB6994E6851D7277 /* Pods-Politikapp.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CLANG_ENABLE_MODULES = YES;
 				INFOPLIST_FILE = Politikapp/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = Politikapp.Politikapp;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = "Politikapp/Politikapp-Bridging-Header.h";
 				SWIFT_VERSION = 3.0;
 			};
 			name = Release;

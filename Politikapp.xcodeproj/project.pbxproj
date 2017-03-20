@@ -7,14 +7,20 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		1FCD12AF747F74B6CE31B8C2 /* Pods_PolitikappUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7F7E29DE67480056A57A886A /* Pods_PolitikappUITests.framework */; };
+		4D30C5F47A8C22474194EE77 /* Pods_PolitikappTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 64082D237C1B9488CB5AC6CF /* Pods_PolitikappTests.framework */; };
+		83005D1B1E8005C8008BF4C4 /* RegistrierungVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 83005D1A1E8005C8008BF4C4 /* RegistrierungVC.swift */; };
+		83005D1D1E800630008BF4C4 /* PasswortVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 83005D1C1E800630008BF4C4 /* PasswortVC.swift */; };
+		83005D1F1E800AD6008BF4C4 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 83005D1E1E800AD6008BF4C4 /* GoogleService-Info.plist */; };
 		83CDE5B61E7FECE0008F3EED /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 83CDE5B51E7FECE0008F3EED /* AppDelegate.swift */; };
-		83CDE5B81E7FECE0008F3EED /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 83CDE5B71E7FECE0008F3EED /* ViewController.swift */; };
+		83CDE5B81E7FECE0008F3EED /* LoginVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 83CDE5B71E7FECE0008F3EED /* LoginVC.swift */; };
 		83CDE5BB1E7FECE0008F3EED /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 83CDE5B91E7FECE0008F3EED /* Main.storyboard */; };
 		83CDE5BE1E7FECE0008F3EED /* Politikapp.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 83CDE5BC1E7FECE0008F3EED /* Politikapp.xcdatamodeld */; };
 		83CDE5C01E7FECE0008F3EED /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 83CDE5BF1E7FECE0008F3EED /* Assets.xcassets */; };
 		83CDE5C31E7FECE0008F3EED /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 83CDE5C11E7FECE0008F3EED /* LaunchScreen.storyboard */; };
 		83CDE5CE1E7FECE0008F3EED /* PolitikappTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 83CDE5CD1E7FECE0008F3EED /* PolitikappTests.swift */; };
 		83CDE5D91E7FECE0008F3EED /* PolitikappUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 83CDE5D81E7FECE0008F3EED /* PolitikappUITests.swift */; };
+		B1C3BD2F690D894B0DF31B1B /* Pods_Politikapp.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B7E5CCABC9E176DD86B65B64 /* Pods_Politikapp.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -35,9 +41,17 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		2CDFDB1508620C78947DCD28 /* Pods-PolitikappTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-PolitikappTests.release.xcconfig"; path = "Pods/Target Support Files/Pods-PolitikappTests/Pods-PolitikappTests.release.xcconfig"; sourceTree = "<group>"; };
+		35C3ABF81CEF59CAC31FC40C /* Pods-PolitikappTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-PolitikappTests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-PolitikappTests/Pods-PolitikappTests.debug.xcconfig"; sourceTree = "<group>"; };
+		64082D237C1B9488CB5AC6CF /* Pods_PolitikappTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_PolitikappTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		77529FB5CB6994E6851D7277 /* Pods-Politikapp.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Politikapp.release.xcconfig"; path = "Pods/Target Support Files/Pods-Politikapp/Pods-Politikapp.release.xcconfig"; sourceTree = "<group>"; };
+		7F7E29DE67480056A57A886A /* Pods_PolitikappUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_PolitikappUITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		83005D1A1E8005C8008BF4C4 /* RegistrierungVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RegistrierungVC.swift; sourceTree = "<group>"; };
+		83005D1C1E800630008BF4C4 /* PasswortVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PasswortVC.swift; sourceTree = "<group>"; };
+		83005D1E1E800AD6008BF4C4 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = SOURCE_ROOT; };
 		83CDE5B21E7FECE0008F3EED /* Politikapp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Politikapp.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		83CDE5B51E7FECE0008F3EED /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		83CDE5B71E7FECE0008F3EED /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		83CDE5B71E7FECE0008F3EED /* LoginVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginVC.swift; sourceTree = "<group>"; };
 		83CDE5BA1E7FECE0008F3EED /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		83CDE5BD1E7FECE0008F3EED /* Politikapp.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = Politikapp.xcdatamodel; sourceTree = "<group>"; };
 		83CDE5BF1E7FECE0008F3EED /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -49,6 +63,10 @@
 		83CDE5D41E7FECE0008F3EED /* PolitikappUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = PolitikappUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		83CDE5D81E7FECE0008F3EED /* PolitikappUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PolitikappUITests.swift; sourceTree = "<group>"; };
 		83CDE5DA1E7FECE0008F3EED /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		B7E5CCABC9E176DD86B65B64 /* Pods_Politikapp.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Politikapp.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		C96D00F421418CC559E0DBDB /* Pods-PolitikappUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-PolitikappUITests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-PolitikappUITests/Pods-PolitikappUITests.debug.xcconfig"; sourceTree = "<group>"; };
+		F5FFE38C2E147563A78F602A /* Pods-PolitikappUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-PolitikappUITests.release.xcconfig"; path = "Pods/Target Support Files/Pods-PolitikappUITests/Pods-PolitikappUITests.release.xcconfig"; sourceTree = "<group>"; };
+		FCDDF25FBAF069F80B06C693 /* Pods-Politikapp.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Politikapp.debug.xcconfig"; path = "Pods/Target Support Files/Pods-Politikapp/Pods-Politikapp.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -56,6 +74,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				B1C3BD2F690D894B0DF31B1B /* Pods_Politikapp.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -63,6 +82,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				4D30C5F47A8C22474194EE77 /* Pods_PolitikappTests.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -70,12 +90,26 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				1FCD12AF747F74B6CE31B8C2 /* Pods_PolitikappUITests.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		0C1D41CB392DDDFAADCC011A /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				FCDDF25FBAF069F80B06C693 /* Pods-Politikapp.debug.xcconfig */,
+				77529FB5CB6994E6851D7277 /* Pods-Politikapp.release.xcconfig */,
+				35C3ABF81CEF59CAC31FC40C /* Pods-PolitikappTests.debug.xcconfig */,
+				2CDFDB1508620C78947DCD28 /* Pods-PolitikappTests.release.xcconfig */,
+				C96D00F421418CC559E0DBDB /* Pods-PolitikappUITests.debug.xcconfig */,
+				F5FFE38C2E147563A78F602A /* Pods-PolitikappUITests.release.xcconfig */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
 		83CDE5A91E7FECE0008F3EED = {
 			isa = PBXGroup;
 			children = (
@@ -83,6 +117,8 @@
 				83CDE5CC1E7FECE0008F3EED /* PolitikappTests */,
 				83CDE5D71E7FECE0008F3EED /* PolitikappUITests */,
 				83CDE5B31E7FECE0008F3EED /* Products */,
+				0C1D41CB392DDDFAADCC011A /* Pods */,
+				873F7201A758118D304A9ACB /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -100,11 +136,14 @@
 			isa = PBXGroup;
 			children = (
 				83CDE5B51E7FECE0008F3EED /* AppDelegate.swift */,
-				83CDE5B71E7FECE0008F3EED /* ViewController.swift */,
+				83CDE5B71E7FECE0008F3EED /* LoginVC.swift */,
+				83005D1C1E800630008BF4C4 /* PasswortVC.swift */,
+				83005D1A1E8005C8008BF4C4 /* RegistrierungVC.swift */,
 				83CDE5B91E7FECE0008F3EED /* Main.storyboard */,
 				83CDE5BF1E7FECE0008F3EED /* Assets.xcassets */,
 				83CDE5C11E7FECE0008F3EED /* LaunchScreen.storyboard */,
 				83CDE5C41E7FECE0008F3EED /* Info.plist */,
+				83005D1E1E800AD6008BF4C4 /* GoogleService-Info.plist */,
 				83CDE5BC1E7FECE0008F3EED /* Politikapp.xcdatamodeld */,
 			);
 			path = Politikapp;
@@ -128,6 +167,16 @@
 			path = PolitikappUITests;
 			sourceTree = "<group>";
 		};
+		873F7201A758118D304A9ACB /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				B7E5CCABC9E176DD86B65B64 /* Pods_Politikapp.framework */,
+				64082D237C1B9488CB5AC6CF /* Pods_PolitikappTests.framework */,
+				7F7E29DE67480056A57A886A /* Pods_PolitikappUITests.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -135,9 +184,12 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 83CDE5DD1E7FECE0008F3EED /* Build configuration list for PBXNativeTarget "Politikapp" */;
 			buildPhases = (
+				9D100911DD38B9F3E78A733A /* [CP] Check Pods Manifest.lock */,
 				83CDE5AE1E7FECE0008F3EED /* Sources */,
 				83CDE5AF1E7FECE0008F3EED /* Frameworks */,
 				83CDE5B01E7FECE0008F3EED /* Resources */,
+				6C36289C84AF8C90206146E3 /* [CP] Embed Pods Frameworks */,
+				CA4EA536375797E672BE68F5 /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -152,9 +204,12 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 83CDE5E01E7FECE0008F3EED /* Build configuration list for PBXNativeTarget "PolitikappTests" */;
 			buildPhases = (
+				53CDB7B809498DDE93B03E48 /* [CP] Check Pods Manifest.lock */,
 				83CDE5C51E7FECE0008F3EED /* Sources */,
 				83CDE5C61E7FECE0008F3EED /* Frameworks */,
 				83CDE5C71E7FECE0008F3EED /* Resources */,
+				0C0A27F59A71FDA31B72F628 /* [CP] Embed Pods Frameworks */,
+				C4C6F7C4CBAE9842624D7BC0 /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -170,9 +225,12 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 83CDE5E31E7FECE0008F3EED /* Build configuration list for PBXNativeTarget "PolitikappUITests" */;
 			buildPhases = (
+				2A0A410A5D71A181FABC222A /* [CP] Check Pods Manifest.lock */,
 				83CDE5D01E7FECE0008F3EED /* Sources */,
 				83CDE5D11E7FECE0008F3EED /* Frameworks */,
 				83CDE5D21E7FECE0008F3EED /* Resources */,
+				CE586D23C8633AE188124EC1 /* [CP] Embed Pods Frameworks */,
+				BF1F1F3E8F38F8D7A620709C /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -236,6 +294,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				83CDE5C31E7FECE0008F3EED /* LaunchScreen.storyboard in Resources */,
+				83005D1F1E800AD6008BF4C4 /* GoogleService-Info.plist in Resources */,
 				83CDE5C01E7FECE0008F3EED /* Assets.xcassets in Resources */,
 				83CDE5BB1E7FECE0008F3EED /* Main.storyboard in Resources */,
 			);
@@ -257,14 +316,154 @@
 		};
 /* End PBXResourcesBuildPhase section */
 
+/* Begin PBXShellScriptBuildPhase section */
+		0C0A27F59A71FDA31B72F628 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-PolitikappTests/Pods-PolitikappTests-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		2A0A410A5D71A181FABC222A /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n";
+			showEnvVarsInLog = 0;
+		};
+		53CDB7B809498DDE93B03E48 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n";
+			showEnvVarsInLog = 0;
+		};
+		6C36289C84AF8C90206146E3 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-Politikapp/Pods-Politikapp-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		9D100911DD38B9F3E78A733A /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n";
+			showEnvVarsInLog = 0;
+		};
+		BF1F1F3E8F38F8D7A620709C /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-PolitikappUITests/Pods-PolitikappUITests-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		C4C6F7C4CBAE9842624D7BC0 /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-PolitikappTests/Pods-PolitikappTests-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		CA4EA536375797E672BE68F5 /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-Politikapp/Pods-Politikapp-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		CE586D23C8633AE188124EC1 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-PolitikappUITests/Pods-PolitikappUITests-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
 /* Begin PBXSourcesBuildPhase section */
 		83CDE5AE1E7FECE0008F3EED /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
 				83CDE5BE1E7FECE0008F3EED /* Politikapp.xcdatamodeld in Sources */,
-				83CDE5B81E7FECE0008F3EED /* ViewController.swift in Sources */,
+				83CDE5B81E7FECE0008F3EED /* LoginVC.swift in Sources */,
+				83005D1D1E800630008BF4C4 /* PasswortVC.swift in Sources */,
 				83CDE5B61E7FECE0008F3EED /* AppDelegate.swift in Sources */,
+				83005D1B1E8005C8008BF4C4 /* RegistrierungVC.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -414,6 +613,7 @@
 		};
 		83CDE5DE1E7FECE0008F3EED /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = FCDDF25FBAF069F80B06C693 /* Pods-Politikapp.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				INFOPLIST_FILE = Politikapp/Info.plist;
@@ -426,6 +626,7 @@
 		};
 		83CDE5DF1E7FECE0008F3EED /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 77529FB5CB6994E6851D7277 /* Pods-Politikapp.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				INFOPLIST_FILE = Politikapp/Info.plist;
@@ -438,6 +639,7 @@
 		};
 		83CDE5E11E7FECE0008F3EED /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 35C3ABF81CEF59CAC31FC40C /* Pods-PolitikappTests.debug.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				BUNDLE_LOADER = "$(TEST_HOST)";
@@ -452,6 +654,7 @@
 		};
 		83CDE5E21E7FECE0008F3EED /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 2CDFDB1508620C78947DCD28 /* Pods-PolitikappTests.release.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				BUNDLE_LOADER = "$(TEST_HOST)";
@@ -466,6 +669,7 @@
 		};
 		83CDE5E41E7FECE0008F3EED /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = C96D00F421418CC559E0DBDB /* Pods-PolitikappUITests.debug.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				INFOPLIST_FILE = PolitikappUITests/Info.plist;
@@ -479,6 +683,7 @@
 		};
 		83CDE5E51E7FECE0008F3EED /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = F5FFE38C2E147563A78F602A /* Pods-PolitikappUITests.release.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				INFOPLIST_FILE = PolitikappUITests/Info.plist;
@@ -509,6 +714,7 @@
 				83CDE5DF1E7FECE0008F3EED /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		83CDE5E01E7FECE0008F3EED /* Build configuration list for PBXNativeTarget "PolitikappTests" */ = {
 			isa = XCConfigurationList;
@@ -517,6 +723,7 @@
 				83CDE5E21E7FECE0008F3EED /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		83CDE5E31E7FECE0008F3EED /* Build configuration list for PBXNativeTarget "PolitikappUITests" */ = {
 			isa = XCConfigurationList;
@@ -525,6 +732,7 @@
 				83CDE5E51E7FECE0008F3EED /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 

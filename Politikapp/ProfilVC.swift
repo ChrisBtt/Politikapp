@@ -34,7 +34,7 @@ class ProfilVC: UIViewController {
         // Do any additional setup after loading the view.
         lblAccount.text = FIRAuth.auth()?.currentUser!.email
         
-        self.view.addGestureRecognizer(self.revealViewController().panGestureRecognizer())
+//        self.view.addGestureRecognizer(self.revealViewController().panGestureRecognizer())
     }
     
 }

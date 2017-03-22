@@ -32,7 +32,7 @@ class LoginVC: UIViewController {
                     print("Du hast dich erfollgreich eingeloggt")
                     //Goes to the Setup page which lets the user take a photo for their profile picture and also chose a username
                     
-                    let vc = self.storyboard?.instantiateViewController(withIdentifier: "Home")
+                    let vc = self.storyboard?.instantiateViewController(withIdentifier: "Front")
                     self.present(vc!, animated: true, completion: nil)
                     
                 } else {

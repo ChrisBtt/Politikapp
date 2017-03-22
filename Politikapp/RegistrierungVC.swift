@@ -18,7 +18,7 @@ class RegistrierungVC: UIViewController {
     @IBAction func btnRegistrieren(_ sender: AnyObject) {
         
         if txtEmail.text == "" {
-            let alertController = UIAlertController(title: "Error", message: "Please enter your email and password", preferredStyle: .alert)
+            let alertController = UIAlertController(title: "Error", message: "Bite gib deine Email und dein Passwort ein", preferredStyle: .alert)
             
             let defaultAction = UIAlertAction(title: "OK", style: .cancel, handler: nil)
             alertController.addAction(defaultAction)
@@ -32,7 +32,7 @@ class RegistrierungVC: UIViewController {
                     print("Du hast dich erfolgreich registriert")
                     //Goes to the Setup page which lets the user take a photo for their profile picture and also chose a username
                     
-                    let vc = self.storyboard?.instantiateViewController(withIdentifier: "Home")
+                    let vc = self.storyboard?.instantiateViewController(withIdentifier: "Front")
                     self.present(vc!, animated: true, completion: nil)
                     
                 } else {

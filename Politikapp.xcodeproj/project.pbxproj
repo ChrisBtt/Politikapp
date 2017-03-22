@@ -14,6 +14,8 @@
 		83005D1F1E800AD6008BF4C4 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 83005D1E1E800AD6008BF4C4 /* GoogleService-Info.plist */; };
 		83005D231E802DB7008BF4C4 /* SWRevealViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 83005D221E802DB7008BF4C4 /* SWRevealViewController.m */; };
 		83005D271E802FF7008BF4C4 /* HomeVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 83005D261E802FF7008BF4C4 /* HomeVC.swift */; };
+		8320ED5E1E82C52F00B4702E /* FrontTVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8320ED5D1E82C52F00B4702E /* FrontTVC.swift */; };
+		8320ED601E82CC4200B4702E /* StatisticsTVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8320ED5F1E82CC4100B4702E /* StatisticsTVC.swift */; };
 		83BF9EAD1E81480700346D5A /* BackTableVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 83BF9EAC1E81480700346D5A /* BackTableVC.swift */; };
 		83BF9EAF1E81528800346D5A /* ProfilVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 83BF9EAE1E81528800346D5A /* ProfilVC.swift */; };
 		83BF9EB21E81588A00346D5A /* NewQuestionVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 83BF9EB11E81588A00346D5A /* NewQuestionVC.swift */; };
@@ -58,6 +60,8 @@
 		83005D211E802DB7008BF4C4 /* SWRevealViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SWRevealViewController.h; sourceTree = "<group>"; };
 		83005D221E802DB7008BF4C4 /* SWRevealViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SWRevealViewController.m; sourceTree = "<group>"; };
 		83005D261E802FF7008BF4C4 /* HomeVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HomeVC.swift; sourceTree = "<group>"; };
+		8320ED5D1E82C52F00B4702E /* FrontTVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FrontTVC.swift; sourceTree = "<group>"; };
+		8320ED5F1E82CC4100B4702E /* StatisticsTVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = StatisticsTVC.swift; sourceTree = "<group>"; };
 		83BF9EAC1E81480700346D5A /* BackTableVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BackTableVC.swift; sourceTree = "<group>"; };
 		83BF9EAE1E81528800346D5A /* ProfilVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ProfilVC.swift; sourceTree = "<group>"; };
 		83BF9EB11E81588A00346D5A /* NewQuestionVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NewQuestionVC.swift; sourceTree = "<group>"; };
@@ -182,6 +186,8 @@
 			children = (
 				83CDE5B51E7FECE0008F3EED /* AppDelegate.swift */,
 				83CDE5B91E7FECE0008F3EED /* Main.storyboard */,
+				8320ED5D1E82C52F00B4702E /* FrontTVC.swift */,
+				8320ED5F1E82CC4100B4702E /* StatisticsTVC.swift */,
 				83BF9EB01E8152D400346D5A /* Menu ViewController */,
 				83005D241E802EE5008BF4C4 /* Login ViewController */,
 				83CDE5BF1E7FECE0008F3EED /* Assets.xcassets */,
@@ -504,6 +510,8 @@
 			buildActionMask = 2147483647;
 			files = (
 				83CDE5BE1E7FECE0008F3EED /* Politikapp.xcdatamodeld in Sources */,
+				8320ED5E1E82C52F00B4702E /* FrontTVC.swift in Sources */,
+				8320ED601E82CC4200B4702E /* StatisticsTVC.swift in Sources */,
 				83CDE5B81E7FECE0008F3EED /* LoginVC.swift in Sources */,
 				83005D1D1E800630008BF4C4 /* PasswortVC.swift in Sources */,
 				83CDE5B61E7FECE0008F3EED /* AppDelegate.swift in Sources */,

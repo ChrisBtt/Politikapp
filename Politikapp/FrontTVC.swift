@@ -14,6 +14,7 @@ class FrontTVC: UITableViewController {
     
 //    var questions = ["Ist Demokratie wichtig?", "Kann Merkel unsere Probleme lösen?", "Neue Frage ..."]
     var data = [String]()
+    var info = [String]()
     
     var ref: FIRDatabaseReference?
     var databaseHandle : FIRDatabaseHandle?
@@ -35,6 +36,14 @@ class FrontTVC: UITableViewController {
                 
                 self.data.append(newQuestion)
                 self.tableView.reloadData()
+                
+                let detail = snapshot.childSnapshot(forPath: "Info").value as? String
+            // add the optional detail to array info even if there is non to keep ahead with array data
+                if let newDetail = detail {
+                    self.info.append(newDetail)
+                } else {
+                    self.info.append("")
+                }
             }
         })
     }
@@ -45,11 +54,30 @@ class FrontTVC: UITableViewController {
     }
     
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        if segue.identifier == "profilSegue" {
+    
+        switch segue.identifier! {
             
-            let dest_vc = segue.destination as? ProfilVC
-            dest_vc?.lblAccount.text = FIRAuth.auth()?.currentUser!.email
-
+        // sends the authorized user email to ProfilVC
+            case "profilSegue":
+                let dest_vc = segue.destination as? ProfilVC
+                dest_vc?.lblAccount.text = FIRAuth.auth()?.currentUser!.email
+            
+        // sends question infos from Firebase Database to DetailVC
+            case "cellSegue":
+                
+                let svc = segue.destination as? UINavigationController
+                let dest_vc = svc?.topViewController as! DetailVC
+                if let chosenIndex = tableView.indexPathForSelectedRow?.row {
+                    
+                    dest_vc.question = data[chosenIndex]
+                    dest_vc.detail = info[chosenIndex]
+                    // get the corresponding info to chosen question
+//                    dest_vc?.lblQuestion?.text = "Frage \(chosenIndex)"
+  //                  dest_vc?.lblDetails?.text = "Hier könnte Ihre Werbung stehen"
+                }
+            
+            default:
+                print("Wrong Segue")
         }
     }
 

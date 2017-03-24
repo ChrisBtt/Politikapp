@@ -28,6 +28,7 @@
 		83CDE5CE1E7FECE0008F3EED /* PolitikappTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 83CDE5CD1E7FECE0008F3EED /* PolitikappTests.swift */; };
 		83CDE5D91E7FECE0008F3EED /* PolitikappUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 83CDE5D81E7FECE0008F3EED /* PolitikappUITests.swift */; };
 		83D532BF1E83C302006B8631 /* DetailVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 83D532BE1E83C302006B8631 /* DetailVC.swift */; };
+		83E037051E857BEE009567FF /* dataStructures.swift in Sources */ = {isa = PBXBuildFile; fileRef = 83E037041E857BEE009567FF /* dataStructures.swift */; };
 		B1C3BD2F690D894B0DF31B1B /* Pods_Politikapp.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B7E5CCABC9E176DD86B65B64 /* Pods_Politikapp.framework */; };
 /* End PBXBuildFile section */
 
@@ -81,6 +82,7 @@
 		83CDE5D81E7FECE0008F3EED /* PolitikappUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PolitikappUITests.swift; sourceTree = "<group>"; };
 		83CDE5DA1E7FECE0008F3EED /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		83D532BE1E83C302006B8631 /* DetailVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DetailVC.swift; sourceTree = "<group>"; };
+		83E037041E857BEE009567FF /* dataStructures.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = dataStructures.swift; sourceTree = "<group>"; };
 		B7E5CCABC9E176DD86B65B64 /* Pods_Politikapp.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Politikapp.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		C96D00F421418CC559E0DBDB /* Pods-PolitikappUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-PolitikappUITests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-PolitikappUITests/Pods-PolitikappUITests.debug.xcconfig"; sourceTree = "<group>"; };
 		F5FFE38C2E147563A78F602A /* Pods-PolitikappUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-PolitikappUITests.release.xcconfig"; path = "Pods/Target Support Files/Pods-PolitikappUITests/Pods-PolitikappUITests.release.xcconfig"; sourceTree = "<group>"; };
@@ -147,6 +149,7 @@
 				83005D211E802DB7008BF4C4 /* SWRevealViewController.h */,
 				83005D221E802DB7008BF4C4 /* SWRevealViewController.m */,
 				83005D201E802DB6008BF4C4 /* Politikapp-Bridging-Header.h */,
+				83E037041E857BEE009567FF /* dataStructures.swift */,
 			);
 			name = "Supporting Files";
 			sourceTree = "<group>";
@@ -515,6 +518,7 @@
 				83CDE5BE1E7FECE0008F3EED /* Politikapp.xcdatamodeld in Sources */,
 				8320ED5E1E82C52F00B4702E /* FrontTVC.swift in Sources */,
 				83D532BF1E83C302006B8631 /* DetailVC.swift in Sources */,
+				83E037051E857BEE009567FF /* dataStructures.swift in Sources */,
 				8320ED601E82CC4200B4702E /* StatisticsTVC.swift in Sources */,
 				83CDE5B81E7FECE0008F3EED /* LoginVC.swift in Sources */,
 				83005D1D1E800630008BF4C4 /* PasswortVC.swift in Sources */,

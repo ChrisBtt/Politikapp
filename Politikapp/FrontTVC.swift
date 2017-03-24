@@ -10,11 +10,13 @@ import UIKit
 import Firebase
 import FirebaseAuth
 
-class FrontTVC: UITableViewController {
+class FrontTVC: UITableViewController, DetailVCDelegate {
     
 //    var questions = ["Ist Demokratie wichtig?", "Kann Merkel unsere Probleme lösen?", "Neue Frage ..."]
     var data = [String]()
     var info = [String]()
+    var dafuer = [Int]()
+    var dagegen = [Int]()
     
     var ref: FIRDatabaseReference?
     var databaseHandle : FIRDatabaseHandle?
@@ -24,7 +26,9 @@ class FrontTVC: UITableViewController {
 
         tableView.delegate = self
         tableView.dataSource = self
-        
+    }
+    
+    override func viewDidAppear(_ animated: Bool) {
         // code to update array data with questions in it from Firebase DB
         ref = FIRDatabase.database().reference()
         
@@ -38,11 +42,23 @@ class FrontTVC: UITableViewController {
                 self.tableView.reloadData()
                 
                 let detail = snapshot.childSnapshot(forPath: "Info").value as? String
-            // add the optional detail to array info even if there is non to keep ahead with array data
+                let ja = snapshot.childSnapshot(forPath: "ja").value as? Int
+                let nein = snapshot.childSnapshot(forPath: "nein").value as? Int
+                // add the optional detail to array info even if there is non to keep ahead with array data
                 if let newDetail = detail {
                     self.info.append(newDetail)
                 } else {
                     self.info.append("")
+                }
+                if let newJa = ja {
+                    self.dafuer.append(newJa)
+                } else {
+                    self.dafuer.append(0)
+                }
+                if let newNein = nein {
+                    self.dagegen.append(newNein)
+                } else {
+                    self.dagegen.append(0)
                 }
             }
         })
@@ -67,13 +83,16 @@ class FrontTVC: UITableViewController {
                 
                 let svc = segue.destination as? UINavigationController
                 let dest_vc = svc?.topViewController as! DetailVC
+                
+                // check for validity of pressed cell 
                 if let chosenIndex = tableView.indexPathForSelectedRow?.row {
                     
                     dest_vc.question = data[chosenIndex]
                     dest_vc.detail = info[chosenIndex]
-                    // get the corresponding info to chosen question
-//                    dest_vc?.lblQuestion?.text = "Frage \(chosenIndex)"
-  //                  dest_vc?.lblDetails?.text = "Hier könnte Ihre Werbung stehen"
+                    dest_vc.dafuer = dafuer[chosenIndex]
+                    dest_vc.dagegen = dagegen[chosenIndex]
+                    dest_vc.index = chosenIndex
+
                 }
             
             default:
@@ -92,6 +111,23 @@ class FrontTVC: UITableViewController {
         cell?.textLabel?.text = data[indexPath.row]
         
         return cell!
+    }
+    
+    // MARK: Implementing the protocol
+    
+    func updateElection(new: Stimme, index: Int) {
+        
+        if new == .ja {
+            print(self.dafuer[index]+1)
+        } else {
+            print(dagegen[index]+1)
+        }
+        
+        // beantwortete Frage aus dem Array data loeschen, um mehrfache Abstimmung zu verhindern
+        data.remove(at: index)
+        info.remove(at: index)
+        dafuer.remove(at: index)
+        dagegen.remove(at: index)
     }
 
 }

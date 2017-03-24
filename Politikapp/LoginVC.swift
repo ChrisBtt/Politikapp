@@ -28,6 +28,8 @@ class LoginVC: UIViewController {
         } else {
             FIRAuth.auth()?.signIn(withEmail: self.txtMail.text!, password: self.txtPassword.text!) { (user, error) in
                 
+/// TODO: shown ViewController depending on user - probably if-Statement with Firebase user.uid
+                
                 if error == nil {
                     print("Du hast dich erfollgreich eingeloggt")
                     //Goes to the Setup page which lets the user take a photo for their profile picture and also chose a username

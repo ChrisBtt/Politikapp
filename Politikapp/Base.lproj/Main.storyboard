@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="11762" systemVersion="16D32" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="1nF-hX-iJq">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="11762" systemVersion="16D32" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="bqf-qH-kf5">
     <device id="retina4_7" orientation="portrait">
         <adaptation id="fullscreen"/>
     </device>
@@ -169,7 +169,7 @@
                                 <rect key="frame" x="0.0" y="28" width="375" height="44"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="LQ6-mR-xHY" id="W7t-pH-tPn">
-                                    <rect key="frame" x="0.0" y="0.0" width="375" height="43.5"/>
+                                    <rect key="frame" x="0.0" y="0.0" width="375" height="43"/>
                                     <autoresizingMask key="autoresizingMask"/>
                                 </tableViewCellContentView>
                                 <connections>
@@ -230,10 +230,16 @@
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" adjustsImageWhenHighlighted="NO" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="E2n-QJ-Sm6">
                                         <rect key="frame" x="0.0" y="0.0" width="132" height="150"/>
                                         <state key="normal" title="Button" image="Thumb Up-50"/>
+                                        <connections>
+                                            <action selector="actDafuer:" destination="N1c-tw-Yog" eventType="touchUpInside" id="ogV-UZ-0le"/>
+                                        </connections>
                                     </button>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="V9R-Wc-xfe">
                                         <rect key="frame" x="132" y="0.0" width="131" height="150"/>
                                         <state key="normal" title="Button" image="Thumbs Down"/>
+                                        <connections>
+                                            <action selector="actDagegen:" destination="N1c-tw-Yog" eventType="touchUpInside" id="3S7-Ce-ZCx"/>
+                                        </connections>
                                     </button>
                                 </subviews>
                                 <constraints>
@@ -396,7 +402,7 @@
                                 <rect key="frame" x="0.0" y="28" width="375" height="44"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="xyK-Xq-70I" id="ZMG-g7-EmC">
-                                    <rect key="frame" x="0.0" y="0.0" width="375" height="43.5"/>
+                                    <rect key="frame" x="0.0" y="0.0" width="375" height="43"/>
                                     <autoresizingMask key="autoresizingMask"/>
                                 </tableViewCellContentView>
                             </tableViewCell>
@@ -550,7 +556,6 @@
         <!--Navigation Controller-->
         <scene sceneID="PkX-E8-LI4">
             <objects>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="V7F-KS-6QY" userLabel="First Responder" sceneMemberID="firstResponder"/>
                 <navigationController automaticallyAdjustsScrollViewInsets="NO" id="rzv-hz-29K" sceneMemberID="viewController">
                     <toolbarItems/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" id="Vcq-Qb-enZ">
@@ -562,6 +567,7 @@
                         <segue destination="N1c-tw-Yog" kind="relationship" relationship="rootViewController" id="qO1-Qd-z3c"/>
                     </connections>
                 </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="V7F-KS-6QY" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="6429.6000000000004" y="-225.33733133433284"/>
         </scene>

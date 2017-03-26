@@ -36,8 +36,9 @@ class DetailVC: UIViewController {
         let alertController = UIAlertController(title: "Vielen Dank", message: "Du hast dich erfolgreich in die Politik eingemischt", preferredStyle: .alert)
         
         let defaultAction = UIAlertAction(title: "OK", style: .cancel) { _ in
-            
-// FIXME: update tableView correctly by deleting the answered question
+        
+// FIXME: answer each question only once
+
             self.delegate?.updateElection(new: .ja, index: self.index)
             self.sendParameter(new: .ja)
             self.dismiss(animated: true, completion: nil)
@@ -54,8 +55,8 @@ class DetailVC: UIViewController {
         
         let defaultAction = UIAlertAction(title: "OK", style: .cancel) { _ in
 
-// FIXME: update tableView correctly by deleting the answered question
-            self.delegate?.updateElection(new: .nein, index: self.index)
+// FIXME: answer each question only once
+            self.delegate!.updateElection(new: .nein, index: self.index)
             self.sendParameter(new: .nein)
             self.dismiss(animated: true, completion: nil)
         }
@@ -67,7 +68,6 @@ class DetailVC: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-
         // Do any additional setup after loading the view.
         
         lblQuestion?.text = question
@@ -87,7 +87,7 @@ class DetailVC: UIViewController {
         if new == .ja {
             ref.child("Fragen/Frage\(self.index+1)/ja").setValue(dafuer+1)
         } else {
-            ref.child("Fragen/Frage\(self.index+1)/nein").setValue(dafuer+1)
+            ref.child("Fragen/Frage\(self.index+1)/nein").setValue(dagegen+1)
         }
         
     }

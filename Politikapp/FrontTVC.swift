@@ -61,6 +61,16 @@ class FrontTVC: UITableViewController {
 
                 }
             
+            case "statSegue":
+            
+                let svc = segue.destination as? UINavigationController
+                let dest_vc = svc?.topViewController as! StatisticsTVC
+            
+                dest_vc.data = data
+                dest_vc.info = info
+                dest_vc.dafuer = dafuer
+                dest_vc.dagegen = dagegen
+            
             default:
                 print("Wrong Segue")
         }

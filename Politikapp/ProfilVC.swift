@@ -12,7 +12,20 @@ import FirebaseAuth
 
 class ProfilVC: UIViewController {
     
+    // TODO: - change password
+    // TODO: change age, gender, plz -
+    
+    var age : String = ""
+    var gender : String = ""
+    var plz : Int = 0
+    
     @IBOutlet weak var lblAccount: UILabel!
+    @IBOutlet weak var txtAge: UILabel!
+    @IBOutlet weak var txtGender: UILabel!
+    @IBOutlet weak var txtPLZ: UILabel!
+    @IBAction func btnBack(_ sender: Any) {
+        dismiss(animated: true, completion: nil)
+    }
     @IBAction func logOut(_ sender: AnyObject) {
         
         if FIRAuth.auth()?.currentUser != nil {
@@ -34,7 +47,9 @@ class ProfilVC: UIViewController {
         // Do any additional setup after loading the view.
         lblAccount.text = FIRAuth.auth()?.currentUser!.email
         
-//        self.view.addGestureRecognizer(self.revealViewController().panGestureRecognizer())
+        txtAge.text = age
+        txtGender.text = gender
+        txtPLZ.text = String(plz)
     }
     
 }

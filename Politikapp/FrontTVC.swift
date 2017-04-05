@@ -11,13 +11,21 @@ import Firebase
 import FirebaseAuth
 
 class FrontTVC: UITableViewController {
+
+// TODO: - sort questions from DB regarding their date of creation -
     
     var data = [String]()
     var info = [String]()
     var dafuer = [Int]()
     var dagegen = [Int]()
+
+    let user = FIRAuth.auth()?.currentUser
     
-    var ref: FIRDatabaseReference?
+    var age : String = ""
+    var gender : String = ""
+    var plz : Int = 0
+    
+    var ref: FIRDatabaseReference? = FIRDatabase.database().reference()
     var databaseHandle : FIRDatabaseHandle?
     
     override func viewDidLoad() {
@@ -26,6 +34,7 @@ class FrontTVC: UITableViewController {
         tableView.delegate = self
         tableView.dataSource = self
         
+        self.getUserInfo()
         self.connectDB()
     }
 
@@ -42,6 +51,9 @@ class FrontTVC: UITableViewController {
             case "profilSegue":
                 let dest_vc = segue.destination as? ProfilVC
                 dest_vc?.lblAccount.text = FIRAuth.auth()?.currentUser!.email
+                dest_vc?.age = age
+                dest_vc?.gender = gender
+                dest_vc?.plz = plz
             
         // sends question infos from Firebase Database to DetailVC
             case "cellSegue":
@@ -58,7 +70,10 @@ class FrontTVC: UITableViewController {
                     dest_vc.dafuer = dafuer[chosenIndex]
                     dest_vc.dagegen = dagegen[chosenIndex]
                     dest_vc.index = chosenIndex
-
+                    
+                    dest_vc.age = age
+                    dest_vc.gender = gender
+                    dest_vc.plz = plz
                 }
             
             case "statSegue":
@@ -89,12 +104,23 @@ class FrontTVC: UITableViewController {
         return cell!
     }
     
+    // MARK: Function to set the variables age, gender, plz concerning the info from DB
+
+    func getUserInfo() {
+        
+        ref?.child("Benutzer").child((user?.uid)!).observeSingleEvent(of: .value, with: { (snapshot) in
+            self.age = snapshot.childSnapshot(forPath: "Alter").value! as! String
+            self.gender = snapshot.childSnapshot(forPath: "Geschlecht").value! as! String
+            self.plz = snapshot.childSnapshot(forPath: "PLZ").value! as! Int
+        })
+
+    }
+    
     // MARK: Function to checkout the Firebase DB for new questions
     
     func connectDB() {
         
         // code to update array data with questions in it from Firebase DB
-        ref = FIRDatabase.database().reference()
         
         databaseHandle = ref?.child("Fragen").observe(.childAdded, with: {(snapshot) in
             
@@ -108,6 +134,7 @@ class FrontTVC: UITableViewController {
                 let detail = snapshot.childSnapshot(forPath: "Info").value as? String
                 let ja = snapshot.childSnapshot(forPath: "ja").value as? Int
                 let nein = snapshot.childSnapshot(forPath: "nein").value as? Int
+                
                 // add the optional detail to array info even if there is non to keep ahead with array data
                 if let newDetail = detail {
                     self.info.append(newDetail)
@@ -126,7 +153,6 @@ class FrontTVC: UITableViewController {
                 }
             }
         })
-
     }
 }
 

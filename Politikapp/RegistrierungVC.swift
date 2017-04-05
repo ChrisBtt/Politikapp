@@ -50,15 +50,15 @@ class RegistrierungVC: UIViewController, UIPickerViewDelegate, UIPickerViewDataS
                     
                     // set users sex
                     if self.segSex.selectedSegmentIndex == 0 {
-                        self.ref.child("Benutzer/\(user?.uid)/Geschlecht").setValue("Männlich")
+                        self.ref.child("Benutzer/\((user?.uid)!)/Geschlecht").setValue("Männlich")
                     } else {
-                        self.ref.child("Benutzer/\(user?.uid)/Geschlecht").setValue("Weiblich")
+                        self.ref.child("Benutzer/\((user?.uid)!)/Geschlecht").setValue("Weiblich")
                     }
                     
                     // set PLZ as necessary value
                     if self.txtPLZ.text != "" && self.txtPLZ.text?.characters.count == 5, let plz = Int(self.txtPLZ.text!) {
                         
-                        self.ref.child("Benutzer/\(user?.uid)/PLZ").setValue(plz)
+                        self.ref.child("Benutzer/\((user?.uid)!)/PLZ").setValue(plz)
 
                     } else {
                         let alertController = UIAlertController(title: "Error", message: "Die eingegebene Postleitzahl ist ungültig", preferredStyle: .alert)
@@ -72,7 +72,7 @@ class RegistrierungVC: UIViewController, UIPickerViewDelegate, UIPickerViewDataS
                     // set users age
                     switch self.txtAge.text! {
                     case "jünger", "31 - 40", "41 - 50", "51 - 60", "61 - 75", "älter":
-                        self.ref.child("Benutzer/\(user?.uid)/Alter").setValue(self.txtAge.text)
+                        self.ref.child("Benutzer/\((user?.uid)!)/Alter").setValue(self.txtAge.text)
                     default:
                         print("Fehler beim PickerView")
                     }

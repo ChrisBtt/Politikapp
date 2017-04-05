@@ -10,6 +10,9 @@ import Foundation
 
 class NewQuestionVC: UIViewController {
     
+// TODO: make ne child in Firebase DB for new question with example tree
+// TODO: register date of new question to stay up to date
+    
     @IBOutlet weak var barMenu: UIBarButtonItem!
     
     override func viewDidLoad() {

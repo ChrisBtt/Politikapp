@@ -47,13 +47,17 @@ class FrontTVC: UITableViewController {
     
         switch segue.identifier! {
             
-        // sends the authorized user email to ProfilVC
+        // sends authorized user email and dats to ProfilVC
             case "profilSegue":
-                let dest_vc = segue.destination as? ProfilVC
-                dest_vc?.lblAccount.text = FIRAuth.auth()?.currentUser!.email
-                dest_vc?.age = age
-                dest_vc?.gender = gender
-                dest_vc?.plz = plz
+                let svc = segue.destination as? UINavigationController
+                let dest_vc = svc?.topViewController as! ProfilVC
+                
+                let mail = FIRAuth.auth()?.currentUser!.email
+                dest_vc.email = mail!
+                dest_vc.age = age
+                dest_vc.gender = gender
+                dest_vc.plz = plz
+
             
         // sends question infos from Firebase Database to DetailVC
             case "cellSegue":
@@ -76,6 +80,7 @@ class FrontTVC: UITableViewController {
                     dest_vc.plz = plz
                 }
             
+            // sends all question data from DB to statVC
             case "statSegue":
             
                 let svc = segue.destination as? UINavigationController

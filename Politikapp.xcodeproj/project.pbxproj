@@ -14,6 +14,7 @@
 		83005D1F1E800AD6008BF4C4 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 83005D1E1E800AD6008BF4C4 /* GoogleService-Info.plist */; };
 		83005D231E802DB7008BF4C4 /* SWRevealViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 83005D221E802DB7008BF4C4 /* SWRevealViewController.m */; };
 		83005D271E802FF7008BF4C4 /* HomeVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 83005D261E802FF7008BF4C4 /* HomeVC.swift */; };
+		831112701E968BDB00A78A8A /* EditDataVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8311126F1E968BDB00A78A8A /* EditDataVC.swift */; };
 		8320ED5E1E82C52F00B4702E /* FrontTVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8320ED5D1E82C52F00B4702E /* FrontTVC.swift */; };
 		8320ED601E82CC4200B4702E /* StatisticsTVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8320ED5F1E82CC4100B4702E /* StatisticsTVC.swift */; };
 		83BF9EAD1E81480700346D5A /* BackTableVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 83BF9EAC1E81480700346D5A /* BackTableVC.swift */; };
@@ -63,6 +64,7 @@
 		83005D211E802DB7008BF4C4 /* SWRevealViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SWRevealViewController.h; sourceTree = "<group>"; };
 		83005D221E802DB7008BF4C4 /* SWRevealViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SWRevealViewController.m; sourceTree = "<group>"; };
 		83005D261E802FF7008BF4C4 /* HomeVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HomeVC.swift; sourceTree = "<group>"; };
+		8311126F1E968BDB00A78A8A /* EditDataVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = EditDataVC.swift; sourceTree = "<group>"; };
 		8320ED5D1E82C52F00B4702E /* FrontTVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FrontTVC.swift; sourceTree = "<group>"; };
 		8320ED5F1E82CC4100B4702E /* StatisticsTVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = StatisticsTVC.swift; sourceTree = "<group>"; };
 		83BF9EAC1E81480700346D5A /* BackTableVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BackTableVC.swift; sourceTree = "<group>"; };
@@ -162,6 +164,7 @@
 				83D532BE1E83C302006B8631 /* DetailVC.swift */,
 				83BF9EAE1E81528800346D5A /* ProfilVC.swift */,
 				8320ED5D1E82C52F00B4702E /* FrontTVC.swift */,
+				8311126F1E968BDB00A78A8A /* EditDataVC.swift */,
 				8320ED5F1E82CC4100B4702E /* StatisticsTVC.swift */,
 				83CBBF401E883C7700028C06 /* DetailStatVC.swift */,
 			);
@@ -530,6 +533,7 @@
 				8320ED5E1E82C52F00B4702E /* FrontTVC.swift in Sources */,
 				83D532BF1E83C302006B8631 /* DetailVC.swift in Sources */,
 				83E037051E857BEE009567FF /* dataStructures.swift in Sources */,
+				831112701E968BDB00A78A8A /* EditDataVC.swift in Sources */,
 				83CBBF411E883C7700028C06 /* DetailStatVC.swift in Sources */,
 				8320ED601E82CC4200B4702E /* StatisticsTVC.swift in Sources */,
 				83CDE5B81E7FECE0008F3EED /* LoginVC.swift in Sources */,

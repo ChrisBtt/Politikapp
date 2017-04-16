@@ -1,0 +1,6 @@
+framework module Pods_Politikapp {
+  umbrella header "Pods-Politikapp-umbrella.h"
+
+  export *
+  module * { export * }
+}

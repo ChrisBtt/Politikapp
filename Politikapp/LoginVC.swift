@@ -35,12 +35,8 @@ class LoginVC: UIViewController {
                     print(user?.uid ?? "")
                     //Goes to the Setup page which lets the user take a photo for their profile picture and also chose a username
                     
-                    if user?.uid != "HbSEOHg5VhZJj6Ob5RjFv2SYNE03" {
-                        let vc = self.storyboard?.instantiateViewController(withIdentifier: "Front")
-                        self.present(vc!, animated: true, completion: nil)
-                    } else {
-                        print("Error")
-                    }
+                    let vc = self.storyboard?.instantiateViewController(withIdentifier: "Front")
+                    self.present(vc!, animated: true, completion: nil)
                     
                 } else {
                     let alertController = UIAlertController(title: "Error", message: error?.localizedDescription, preferredStyle: .alert)

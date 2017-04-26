@@ -13,6 +13,7 @@ import Firebase
 protocol DetailVCDelegate : class {
     
     func updateElection (new: Stimme, index: Int)
+    func send(new: Stimme, index: Int)
 }
 
 class DetailVC: UIViewController {
@@ -48,7 +49,8 @@ class DetailVC: UIViewController {
 // FIXME: answer each question only once
 
             self.delegate?.updateElection(new: .ja, index: self.index)
-            self.sendParameter(new: .ja)
+            self.delegate!.send(new: Stimme.ja, index: self.index)
+//            FrontTVC().sendParameter(sender as! UIButton, new: .ja)
             self.dismiss(animated: true, completion: nil)
             
         }
@@ -65,7 +67,8 @@ class DetailVC: UIViewController {
 
 // FIXME: answer each question only once
             self.delegate!.updateElection(new: .nein, index: self.index)
-            self.sendParameter(new: .nein)
+            self.delegate!.send(new: Stimme.nein, index: self.index)
+//            FrontTVC().sendParameter(sender as! UIButton, new: .nein)
             self.dismiss(animated: true, completion: nil)
         }
         alertController.addAction(defaultAction)
@@ -85,44 +88,6 @@ class DetailVC: UIViewController {
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
-    }
-    
-    func sendParameter(new: Stimme) -> Void {
-        
-        ref = FIRDatabase.database().reference()
-        
-        // updates the current statistics of answered question with user info
-        databaseHandle = ref?.child("Fragen/Frage\(index+1)").observe(.value, with: {(snapshot) in
-            
-            if snapshot.hasChild("Alter/\(self.age)") {
-                let currentAge = snapshot.childSnapshot(forPath: "Alter/\(self.age)").value as! Int
-                self.ref?.child("Fragen/Frage\(self.index+1)/Alter/\(self.age)").setValue(currentAge+1)
-            } else {
-                snapshot.childSnapshot(forPath: "Alter").setValue(1, forKey: "\(self.age)")
-            }
-            
-            if snapshot.hasChild("PLZ/\(self.plz)") {
-                let currentPLZ = snapshot.childSnapshot(forPath: "PLZ/\(self.plz)").value as! Int
-                self.ref?.child("Fragen/Frage\(self.index+1)/PLZ/\(self.plz)").setValue(currentPLZ+1)
-            } else {
-                snapshot.childSnapshot(forPath: "PLZ").setValue(1, forKey: "\(self.plz)")
-            }
-            
-            if snapshot.hasChild("Geschlecht/\(self.gender)") {
-                let currentGender = snapshot.childSnapshot(forPath: "Geschlecht/\(self.gender)").value as! Int
-                self.ref?.child("Fragen/Frage\(self.index+1)/Geschlecht/\(self.gender)").setValue(currentGender+1)
-            } else {
-                snapshot.childSnapshot(forPath: "Geschlecht").setValue(1, forKey: "\(self.gender)")
-            }
-        })
-
-        
-        if new == .ja {
-            ref?.child("Fragen/Frage\(self.index+1)/ja").setValue(dafuer+1)
-        } else {
-            ref?.child("Fragen/Frage\(self.index+1)/nein").setValue(dagegen+1)
-        }
-        
     }
     
 }

@@ -31,7 +31,7 @@ class RegistrierungVC: UIViewController, UIPickerViewDelegate, UIPickerViewDataS
         
 // FIXME: check whether given Email is correct
         if txtEmail.text == "" {
-            let alertController = UIAlertController(title: "Error", message: "Bite gib deine Email und dein Passwort ein", preferredStyle: .alert)
+            let alertController = UIAlertController(title: "Error", message: "Bitte gib deine Email und dein Passwort ein", preferredStyle: .alert)
             
             let defaultAction = UIAlertAction(title: "OK", style: .cancel, handler: nil)
             alertController.addAction(defaultAction)

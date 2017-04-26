@@ -1,11 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="12118" systemVersion="16D32" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="bqf-qH-kf5">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="12120" systemVersion="16D32" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="bqf-qH-kf5">
     <device id="retina4_7" orientation="portrait">
         <adaptation id="fullscreen"/>
     </device>
     <dependencies>
         <deployment identifier="iOS"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="12086"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="12088"/>
         <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
@@ -160,20 +160,104 @@
         <scene sceneID="eze-RW-fLD">
             <objects>
                 <tableViewController storyboardIdentifier="FrontTVC" title="offene Fragen" useStoryboardIdentifierAsRestorationIdentifier="YES" id="DQ6-Dr-GAM" customClass="FrontTVC" customModule="Politikapp" customModuleProvider="target" sceneMemberID="viewController">
-                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="28" sectionFooterHeight="28" id="gix-dL-f3b">
+                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="100" sectionHeaderHeight="28" sectionFooterHeight="28" id="gix-dL-f3b">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <prototypes>
-                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" restorationIdentifier="QuestionCell" selectionStyle="default" indentationWidth="10" reuseIdentifier="QuestionCell" id="LQ6-mR-xHY">
-                                <rect key="frame" x="0.0" y="28" width="375" height="44"/>
+                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" restorationIdentifier="questionCell" selectionStyle="default" indentationWidth="10" reuseIdentifier="QuestionCell" rowHeight="80" id="LQ6-mR-xHY" customClass="FrontCell" customModule="Politikapp" customModuleProvider="target">
+                                <rect key="frame" x="0.0" y="28" width="375" height="80"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="LQ6-mR-xHY" id="W7t-pH-tPn">
-                                    <rect key="frame" x="0.0" y="0.0" width="375" height="43.5"/>
+                                    <rect key="frame" x="0.0" y="0.0" width="375" height="79.5"/>
                                     <autoresizingMask key="autoresizingMask"/>
+                                    <subviews>
+                                        <stackView opaque="NO" contentMode="scaleToFill" distribution="fillProportionally" translatesAutoresizingMaskIntoConstraints="NO" id="OiD-9Q-44G">
+                                            <rect key="frame" x="0.0" y="0.0" width="375" height="79.5"/>
+                                            <subviews>
+                                                <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="x1M-bm-3ds">
+                                                    <rect key="frame" x="0.0" y="0.0" width="281.5" height="79.5"/>
+                                                    <subviews>
+                                                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="wordWrap" translatesAutoresizingMaskIntoConstraints="NO" id="zhv-aT-ThQ">
+                                                            <rect key="frame" x="0.0" y="0.0" width="281.5" height="49.5"/>
+                                                            <fontDescription key="fontDescription" name=".AppleSystemUIFont" family=".AppleSystemUIFont" pointSize="15"/>
+                                                            <state key="normal" title="Button"/>
+                                                            <connections>
+                                                                <segue destination="rzv-hz-29K" kind="presentation" identifier="cellSegue" id="yqV-jC-jqe"/>
+                                                            </connections>
+                                                        </button>
+                                                        <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" translatesAutoresizingMaskIntoConstraints="NO" id="OlH-jl-yAj">
+                                                            <rect key="frame" x="0.0" y="49.5" width="281.5" height="30"/>
+                                                            <subviews>
+                                                                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="jKL-69-ZPw">
+                                                                    <rect key="frame" x="0.0" y="0.0" width="94" height="30"/>
+                                                                    <state key="normal" title="Button"/>
+                                                                    <connections>
+                                                                        <action selector="pressedInfo:" destination="LQ6-mR-xHY" eventType="touchUpInside" id="nl3-un-RIq"/>
+                                                                        <segue destination="rzv-hz-29K" kind="presentation" identifier="cell2Segue" id="Nh7-0G-rqi"/>
+                                                                    </connections>
+                                                                </button>
+                                                                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="epd-CA-WQS">
+                                                                    <rect key="frame" x="94" y="0.0" width="94" height="30"/>
+                                                                    <state key="normal" title="Button"/>
+                                                                </button>
+                                                                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="6jn-ZH-IQ2">
+                                                                    <rect key="frame" x="188" y="0.0" width="93.5" height="30"/>
+                                                                    <state key="normal" title="Button"/>
+                                                                </button>
+                                                            </subviews>
+                                                        </stackView>
+                                                    </subviews>
+                                                    <constraints>
+                                                        <constraint firstItem="OlH-jl-yAj" firstAttribute="width" secondItem="x1M-bm-3ds" secondAttribute="width" id="bC8-J4-ihq"/>
+                                                        <constraint firstItem="zhv-aT-ThQ" firstAttribute="width" secondItem="x1M-bm-3ds" secondAttribute="width" id="rdv-sy-Yke"/>
+                                                    </constraints>
+                                                </stackView>
+                                                <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillEqually" translatesAutoresizingMaskIntoConstraints="NO" id="Hmj-gX-EIc">
+                                                    <rect key="frame" x="281.5" y="0.0" width="93.5" height="79.5"/>
+                                                    <subviews>
+                                                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="wPa-T1-NdD">
+                                                            <rect key="frame" x="0.0" y="0.0" width="93.5" height="40"/>
+                                                            <state key="normal" title="Button"/>
+                                                            <connections>
+                                                                <action selector="pressedJa:" destination="LQ6-mR-xHY" eventType="touchUpInside" id="ns8-Gp-vCt"/>
+                                                                <action selector="pressedJa:" destination="DQ6-Dr-GAM" eventType="touchUpInside" id="z9z-a5-Rto"/>
+                                                            </connections>
+                                                        </button>
+                                                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="O0d-8L-zOR">
+                                                            <rect key="frame" x="0.0" y="40" width="93.5" height="39.5"/>
+                                                            <state key="normal" title="Button"/>
+                                                            <connections>
+                                                                <action selector="pressedNein:" destination="DQ6-Dr-GAM" eventType="touchUpInside" id="54Q-4S-ni7"/>
+                                                                <action selector="pressedNein:" destination="LQ6-mR-xHY" eventType="touchUpInside" id="HVH-3t-NNk"/>
+                                                            </connections>
+                                                        </button>
+                                                    </subviews>
+                                                    <constraints>
+                                                        <constraint firstItem="wPa-T1-NdD" firstAttribute="width" secondItem="Hmj-gX-EIc" secondAttribute="width" id="To4-X2-dem"/>
+                                                        <constraint firstItem="O0d-8L-zOR" firstAttribute="width" secondItem="Hmj-gX-EIc" secondAttribute="width" id="ghk-XR-uyP"/>
+                                                    </constraints>
+                                                </stackView>
+                                            </subviews>
+                                            <constraints>
+                                                <constraint firstItem="Hmj-gX-EIc" firstAttribute="width" secondItem="jKL-69-ZPw" secondAttribute="width" id="s43-Od-8Ev"/>
+                                            </constraints>
+                                        </stackView>
+                                    </subviews>
+                                    <constraints>
+                                        <constraint firstAttribute="bottom" secondItem="OiD-9Q-44G" secondAttribute="bottom" id="QR5-vc-Mrf"/>
+                                        <constraint firstItem="OiD-9Q-44G" firstAttribute="top" secondItem="W7t-pH-tPn" secondAttribute="top" id="RBY-FC-siG"/>
+                                        <constraint firstAttribute="trailing" secondItem="OiD-9Q-44G" secondAttribute="trailing" id="be0-TZ-I2F"/>
+                                        <constraint firstItem="OiD-9Q-44G" firstAttribute="leading" secondItem="W7t-pH-tPn" secondAttribute="leading" id="dmj-dH-yVk"/>
+                                    </constraints>
                                 </tableViewCellContentView>
                                 <connections>
-                                    <segue destination="rzv-hz-29K" kind="presentation" identifier="cellSegue" id="psW-44-4sq"/>
+                                    <outlet property="btnComment" destination="epd-CA-WQS" id="wcJ-0f-qsI"/>
+                                    <outlet property="btnInfo" destination="jKL-69-ZPw" id="1Zn-ho-Oe9"/>
+                                    <outlet property="btnJa" destination="wPa-T1-NdD" id="qab-Fo-mS2"/>
+                                    <outlet property="btnNein" destination="O0d-8L-zOR" id="MwC-2b-Lwq"/>
+                                    <outlet property="btnStat" destination="6jn-ZH-IQ2" id="Rhz-ap-CyS"/>
+                                    <outlet property="btnTitle" destination="zhv-aT-ThQ" id="8v6-85-rzc"/>
                                 </connections>
                             </tableViewCell>
                         </prototypes>
@@ -182,12 +266,7 @@
                             <outlet property="delegate" destination="DQ6-Dr-GAM" id="yMw-QP-yzm"/>
                         </connections>
                     </tableView>
-                    <navigationItem key="navigationItem" title="offene Fragen" id="wws-D3-oY5">
-                        <barButtonItem key="leftBarButtonItem" title="Statistik" id="lhn-jC-4OL">
-                            <connections>
-                                <segue destination="4gx-2G-Uqe" kind="show" identifier="statSegue" id="bGj-0A-rim"/>
-                            </connections>
-                        </barButtonItem>
+                    <navigationItem key="navigationItem" title="Fragen" id="wws-D3-oY5">
                         <barButtonItem key="rightBarButtonItem" image="profil" style="plain" id="p47-Co-Iug">
                             <connections>
                                 <segue destination="b0l-sE-rDD" kind="presentation" identifier="profilSegue" id="Ezd-nM-oRB"/>
@@ -197,46 +276,7 @@
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="p1w-wP-IRv" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="5506" y="-228"/>
-        </scene>
-        <!--Root View Controller-->
-        <scene sceneID="SoR-1y-shL">
-            <objects>
-                <tableViewController storyboardIdentifier="Statistics" useStoryboardIdentifierAsRestorationIdentifier="YES" id="1QK-AC-C3w" customClass="StatisticsTVC" customModule="Politikapp" customModuleProvider="target" sceneMemberID="viewController">
-                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="28" sectionFooterHeight="28" id="5Jc-Ft-rgY">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
-                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                        <prototypes>
-                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" restorationIdentifier="statCell" selectionStyle="default" indentationWidth="10" reuseIdentifier="statCell" id="FTl-Bl-xw9">
-                                <rect key="frame" x="0.0" y="28" width="375" height="44"/>
-                                <autoresizingMask key="autoresizingMask"/>
-                                <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="FTl-Bl-xw9" id="vJJ-3m-xE2">
-                                    <rect key="frame" x="0.0" y="0.0" width="375" height="43.5"/>
-                                    <autoresizingMask key="autoresizingMask"/>
-                                </tableViewCellContentView>
-                                <connections>
-                                    <segue destination="5Ri-rl-3Dl" kind="presentation" identifier="statDetail" id="TNW-o5-XPV"/>
-                                </connections>
-                            </tableViewCell>
-                        </prototypes>
-                        <connections>
-                            <outlet property="dataSource" destination="1QK-AC-C3w" id="7et-SD-pGd"/>
-                            <outlet property="delegate" destination="1QK-AC-C3w" id="wb9-8m-QOR"/>
-                        </connections>
-                    </tableView>
-                    <navigationItem key="navigationItem" title="Root View Controller" id="sfI-Cg-e61">
-                        <barButtonItem key="leftBarButtonItem" title="Fragen" id="0AG-SA-GL6">
-                            <connections>
-                                <action selector="btnQuestions:" destination="1QK-AC-C3w" id="qiI-WE-0fp"/>
-                            </connections>
-                        </barButtonItem>
-                        <barButtonItem key="rightBarButtonItem" image="profil" id="GOM-hc-W8Z"/>
-                    </navigationItem>
-                </tableViewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="TbU-7i-Xze" userLabel="First Responder" sceneMemberID="firstResponder"/>
-            </objects>
-            <point key="canvasLocation" x="7379" y="-1006"/>
+            <point key="canvasLocation" x="5504.8000000000002" y="-228.03598200899552"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="bMm-o6-gSq">
@@ -252,7 +292,7 @@
                 </navigationController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="9dw-d6-H8m" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="8298" y="-1006"/>
+            <point key="canvasLocation" x="6430" y="-1006"/>
         </scene>
         <!--Detail StatVC-->
         <scene sceneID="qm6-4V-K8M">
@@ -316,23 +356,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="5aQ-ZZ-T6i" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="9216.7999999999993" y="-1006.1469265367317"/>
-        </scene>
-        <!--Navigation Controller-->
-        <scene sceneID="QR1-pE-cmC">
-            <objects>
-                <navigationController id="4gx-2G-Uqe" sceneMemberID="viewController">
-                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="5mr-ye-L8f">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
-                        <autoresizingMask key="autoresizingMask"/>
-                    </navigationBar>
-                    <connections>
-                        <segue destination="1QK-AC-C3w" kind="relationship" relationship="rootViewController" id="Wj1-yw-G7E"/>
-                    </connections>
-                </navigationController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="ilk-WB-pwV" userLabel="First Responder" sceneMemberID="firstResponder"/>
-            </objects>
-            <point key="canvasLocation" x="6425" y="-1006"/>
+            <point key="canvasLocation" x="7369" y="-1006"/>
         </scene>
         <!--DetailVC-->
         <scene sceneID="5jk-5p-nbH">
@@ -739,7 +763,7 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <prototypes>
-                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="questionCell" id="xyK-Xq-70I">
+                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="abc" id="xyK-Xq-70I">
                                 <rect key="frame" x="0.0" y="28" width="375" height="44"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="xyK-Xq-70I" id="ZMG-g7-EmC">
@@ -1008,4 +1032,7 @@
         <image name="menu" width="22" height="22"/>
         <image name="profil" width="22" height="22"/>
     </resources>
+    <inferredMetricsTieBreakers>
+        <segue reference="Nh7-0G-rqi"/>
+    </inferredMetricsTieBreakers>
 </document>
